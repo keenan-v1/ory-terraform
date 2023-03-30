@@ -27,3 +27,9 @@ variable "db_instance_type" {
   description = "The type of database instance to use"
   default     = "db.t4g.micro"
 }
+
+variable "repository" {
+  type        = string
+  description = "The name of the repository"
+  default     = "https://github.com/keenan-v1/ory-terraform"
+}

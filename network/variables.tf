@@ -21,3 +21,9 @@ variable "environment" {
   description = "The environment to use"
   default     = "dev"
 }
+
+variable "repository" {
+  type        = string
+  description = "The name of the repository"
+  default     = "https://github.com/keenan-v1/ory-terraform"
+}

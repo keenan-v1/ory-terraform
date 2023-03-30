@@ -24,6 +24,7 @@ provider "aws" {
       Organization = var.tfe_organization
       Environment  = var.environment
       Workspace    = terraform.workspace
+      Repository   = var.repository
     }
   }
 }
