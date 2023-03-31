@@ -14,7 +14,7 @@ data "aws_secretsmanager_secret_version" "database_password" {
 }
 
 resource "aws_security_group" "database" {
-  name        = "${var.project_name}-ory-database-sg}"
+  name        = "${var.project_name}-ory-database-sg"
   description = "${title(var.project_name)} Ory Database Security Group"
   vpc_id      = data.tfe_outputs.network.values["vpc_id"]
 }
