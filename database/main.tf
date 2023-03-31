@@ -17,6 +17,10 @@ resource "aws_security_group" "database" {
   name        = "${var.project_name}-ory-database-sg"
   description = "${title(var.project_name)} Ory Database Security Group"
   vpc_id      = data.tfe_outputs.network.values["vpc_id"]
+
+  lifecycle {
+    create_before_destroy = true
+  }
 }
 
 resource "aws_vpc_security_group_egress_rule" "database_egress_ipv4" {
